@@ -5,5 +5,5 @@ def safe_print_division(a, b):
     except:
         final = None
     finally:
-        print("Inside Result: {}".format(final))
+        print("Inside result: {}".format(final))
         return final
