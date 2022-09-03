@@ -1,10 +1,6 @@
 #!/usr/bin/python3
-new_in_list = __import__('4-new_in_list').new_in_list
+max_integer = __import__('9-max_integer').max_integer
 
-my_list = [1, 2, 3, 4, 5]
-idx = 3
-new_element = 9
-new_list = new_in_list(my_list, idx, new_element)
-
-print(new_list)
-print(my_list)
+my_list = []
+max_value = max_integer(my_list)
+print("Max: {}".format(max_value))
