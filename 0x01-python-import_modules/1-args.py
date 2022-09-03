@@ -1,17 +1,19 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    import sys
-    argv = sys.argv
+    from sys import argv
+
     args = len(argv) - 1
-    punc = ":"
     i = 0
 
     if args == 1:
         arg_str = "argument"
-    elif args == 0:
-        punc = "."
     else:
         arg_str = "arguments"
+
+    if args == 0:
+        punc = "."
+    else:
+        punc = ":"
 
     print("{:d} {:s}{:s}".format(args, arg_str, punc))
 
