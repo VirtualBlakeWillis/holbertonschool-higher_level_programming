@@ -6,7 +6,7 @@ def roman_to_int(roman_string):
         'C': 100, 'D': 500, 'M': 1000}
 
     if not roman_string or type(roman_string) != str:
-        return None
+        return 0
 
     for idx in range(len(roman_string) - 1):
         current = roman_to_int[roman_string[idx]]
