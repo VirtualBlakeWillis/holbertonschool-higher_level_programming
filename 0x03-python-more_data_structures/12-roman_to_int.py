@@ -9,13 +9,13 @@ def roman_to_int(roman_string):
         return None
 
     for idx in range(len(roman_string) - 1):
-        current = roman_string[idx]
-        next = roman_string[idx + 1]
+        current = roman_to_int[roman_string[idx]]
+        next = roman_to_int[roman_string[idx + 1]]
 
-        if roman_to_int[next] > roman_to_int[current]:
-            final -= roman_to_int[current]
+        if next > current:
+            final -= current
         else:
-            final += roman_to_int[current]
+            final += current
 
     final += roman_to_int[roman_string[-1]]
     return final
