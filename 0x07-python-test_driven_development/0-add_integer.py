@@ -1,6 +1,9 @@
 #!/usr/bin/python3
+ """ return a + b """
+
+
 def add_integer(a, b=98):
-    """ return a + b """
+    """ math and type checking """
     n1 = a
     n2 = b
     if type(a) is float:
