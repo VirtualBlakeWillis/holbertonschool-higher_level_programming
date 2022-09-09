@@ -25,18 +25,18 @@ no args passed in
     >>> add_integer(None)
     Traceback (most recent call last):
     ...
-    TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+    TypeError: a must be an integer
 
 type casting a string
     >>> add_integer("a word")
     Traceback (most recent call last):
     ...
-    ValueError: invalid literal for int() with base 10: 'a word'
+    TypeError: a must be an integer
 
     >>> add_integer("school", 5)
     Traceback (most recent call last):
     ...
-    ValueError: invalid literal for int() with base 10: 'school'
+    TypeError: a must be an integer
     >>> add_integer(5, "school")
     Traceback (most recent call last):
     ...
