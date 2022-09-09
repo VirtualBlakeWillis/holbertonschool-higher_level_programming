@@ -1,21 +1,29 @@
     >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
     
-    >>> matrix_divided([["school"]], 2)
+Failing Test: passing in string in matrix
+    >>> matrix_divided([[1, "school"], [3, 4]], 2)
     Traceback (most recent call last):
     ...
     TypeError: matrix must be a matrix (list of lists) of integers/floats
 
+Failing Test: matrix is not symmetrical:
     >>> matrix_divided([[1],[2,3]], 2)
     Traceback (most recent call last):
     ...
     TypeError: Each row of the matrix must have the same size
 
+Failing Test: divider is not a number
     >>> matrix_divided([[1]], 'div')
     Traceback (most recent call last):
     ...
     TypeError: div must be a number
 
+Failing Test: divider is 0
     >>> matrix_divided([[1]], 0)
     Traceback (most recent call last):
     ...
     ZeroDivisionError: division by zero
+
+Successful Test
+    >>> matrix_divided([[1, 2], [3, 4]], 2)
+    [[0.5, 1.0], [1.5, 2.0]]
