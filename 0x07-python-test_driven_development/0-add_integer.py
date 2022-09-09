@@ -7,7 +7,6 @@ return a + b
 def add_integer(a, b=98):
     """ math and type checking """
 
-
     n1 = int(a)
     n2 = int(b)
 

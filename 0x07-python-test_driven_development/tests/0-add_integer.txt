@@ -32,3 +32,12 @@ type casting a string
     Traceback (most recent call last):
     ...
     ValueError: invalid literal for int() with base 10: 'a word'
+
+    >>> add_integer("school", 5)
+    Traceback (most recent call last):
+    ...
+    ValueError: invalid literal for int() with base 10: 'school'
+    >>> add_integer(5, "school")
+    Traceback (most recent call last):
+    ...
+    ValueError: invalid literal for int() with base 10: 'school'
