@@ -30,3 +30,9 @@ Passing one string:
     Traceback (most recent call last):
     ...
     TypeError: a must be an integer
+
+no args passed in
+    >>> add_integer()
+    Traceback (most recent call last):
+    ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'
