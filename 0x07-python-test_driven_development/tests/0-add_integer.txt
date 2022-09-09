@@ -42,3 +42,8 @@ no args passed in
     ...
     TypeError: a must be an integer
 
+number too big?
+    >>> add_integer(1e300)
+    Traceback (most recent call last):
+    ...
+    OverflowError: a too large

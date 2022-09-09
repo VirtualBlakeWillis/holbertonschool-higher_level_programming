@@ -1,9 +1,13 @@
 #!/usr/bin/python3
-""" return a + b """
+"""
+return a + b
+"""
 
 
 def add_integer(a, b=98):
     """ math and type checking """
+
+
     n1 = a
     n2 = b
     if type(a) is float:
@@ -16,4 +20,6 @@ def add_integer(a, b=98):
     if type(n2) is not int:
         raise TypeError("b must be an integer")
 
+    if a+1 == a:
+        raise OverflowError("a too large")
     return (n1 + n2)
