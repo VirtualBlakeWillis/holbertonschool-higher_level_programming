@@ -24,5 +24,7 @@ of integers/floats")
     if div == 0:
         raise ZeroDivisionError("division by zero")
 
-    new_matrix = [round(val/div, 2) for row in matrix for val in row]
+    new_matrix = []
+    for row in matrix:
+        new_matrix.append([round(val/div, 2) for val in row])
     return new_matrix
