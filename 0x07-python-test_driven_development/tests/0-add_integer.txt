@@ -36,3 +36,9 @@ no args passed in
     Traceback (most recent call last):
     ...
     TypeError: add_integer() missing 1 required positional argument: 'a'
+
+    >>> add_integer(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
