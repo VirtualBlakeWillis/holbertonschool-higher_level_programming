@@ -15,21 +15,6 @@ Correct usage: passing one number in, will add 98
     >>> add_integer(2)
     100
 
-Passing one string:
-    >>> add_integer("school", 12)
-    Traceback (most recent call last):
-    ...
-    TypeError: a must be an integer
-
-    >>> add_integer(12, "school")
-    Traceback (most recent call last):
-    ...
-    TypeError: b must be an integer
-
-    >>> add_integer("school")
-    Traceback (most recent call last):
-    ...
-    TypeError: a must be an integer
 
 no args passed in
     >>> add_integer()
@@ -40,10 +25,10 @@ no args passed in
     >>> add_integer(None)
     Traceback (most recent call last):
     ...
-    TypeError: a must be an integer
+    TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
 
-number too big?
-    >>> add_integer(1e300)
+type casting a string
+    >>> add_integer("a word")
     Traceback (most recent call last):
     ...
-    OverflowError: a too large
+    ValueError: invalid literal for int() with base 10: 'a word'
