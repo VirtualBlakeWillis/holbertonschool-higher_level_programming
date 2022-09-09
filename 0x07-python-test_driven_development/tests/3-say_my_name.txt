@@ -24,6 +24,12 @@ Test Failed: last name is None
     ...
     TypeError: last_name must be a string
 
+Test Failed: only name is int
+    >>> say_my_name(12)
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
 Test Success:
     >>> say_my_name("John", "Smith")
     My name is John Smith
