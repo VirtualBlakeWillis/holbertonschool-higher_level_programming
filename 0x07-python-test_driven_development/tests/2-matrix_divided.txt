@@ -24,6 +24,18 @@ Failing Test: divider is 0
     ...
     ZeroDivisionError: division by zero
 
+    >>> matrix_divided([], 1)
+    Traceback (most recent call last):
+    ...
+    IndexError: list index out of range
+
+    >>> matrix_divided(None, 1)
+    Traceback (most recent call last):
+    ...
+    TypeError: 'NoneType' object is not iterable
+
+
+
 Successful Test
     >>> matrix_divided([[1, 2], [3, 4]], 2)
     [[0.5, 1.0], [1.5, 2.0]]
