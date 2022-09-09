@@ -27,3 +27,7 @@ Failing Test: divider is 0
 Successful Test
     >>> matrix_divided([[1, 2], [3, 4]], 2)
     [[0.5, 1.0], [1.5, 2.0]]
+
+Successful Test
+    >>> matrix_divided([[1, 2], [3, 4]], 2.1)
+    [[0.48, 0.95], [1.43, 1.9]]
