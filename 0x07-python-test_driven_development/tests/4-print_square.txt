@@ -1,0 +1,31 @@
+    >>> print_square = __import__('4-print_square').print_square
+
+
+Failed: no paramaters
+    >>> print_square()
+    Traceback (most recent call last):
+    ...
+    TypeError: print_square() missing 1 required positional argument: 'size'
+
+Failed: type 'None' paramater
+    >>> print_square(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: unorderable types: NoneType() < int()
+
+Failed: type 'str' paramater
+    >>> print_square("school")
+    Traceback (most recent call last):
+    ...
+    TypeError: unorderable types: str() < int()
+
+
+Success: pass int 0
+    >>> print_square(0)
+
+Success: pass int 4
+    >>> print_square(4)
+    ####
+    ####
+    ####
+    ####
