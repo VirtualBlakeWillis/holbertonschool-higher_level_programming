@@ -5,16 +5,13 @@
 def print_square(size):
     """ Error logic """
 
+    if type(size) is not int
+        raise TypeError("size must be an integer")
+
     if size < 0:
         raise ValueError("size must be >= 0")
 
-    if type(size) is float:
-        new_size = int(size)
-    new_size = int(size)
-    if type(new_size) is not int:
-        raise TypeError("size must be an integer")
-
-    for row in range(new_size):
-        for char in range(new_size):
+    for row in range(size):
+        for char in range(size):
             print("#", end="")
         print("")
