@@ -25,6 +25,12 @@ Failed: type list paramater
     ...
     TypeError: unorderable types: list() < int()
 
+Failed: type list paramater
+    >>> print_square(-1)
+    Traceback (most recent call last):
+    ...
+    ValueError: size must be >= 0
+
 
 Success: pass int 0
     >>> print_square(0)
