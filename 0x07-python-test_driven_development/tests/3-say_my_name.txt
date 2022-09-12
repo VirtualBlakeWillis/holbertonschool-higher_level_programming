@@ -7,6 +7,12 @@ Test Failed: first name is not string:
     TypeError: first_name must be a string
 
 
+Test Failed: last name is not string:
+    >>> say_my_name("John", [27, 28])
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
+
 Test Success:
     >>> say_my_name("John", "Smith")
     My name is John Smith
