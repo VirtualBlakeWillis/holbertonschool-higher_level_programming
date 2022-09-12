@@ -43,5 +43,7 @@ type casting a string
     ValueError: invalid literal for int() with base 10: 'school'
 
 ben's ideas:
-    >>> add_integer(-1, -5)
-    -6
+    >>> add_integer([1, 2])
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
