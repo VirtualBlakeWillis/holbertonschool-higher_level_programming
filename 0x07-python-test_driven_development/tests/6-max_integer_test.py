@@ -9,11 +9,8 @@ class TestMaxInteger(unittest.TestCase):
     def test_1_num(self):
         self.assertEqual(max_integer([1]), 1)
 
-    # def test_no_args(self):
-    #     self.assertEqual(max_integer(), None)
-
-    # def test_none(self):
-    #     self.assertRaises(TypeError, max_integer(), None)
+    def test_no_args(self):
+        self.assertEqual(max_integer(), None)
 
     def test_strList(self):
         self.assertRaises(TypeError, max_integer(["hi", "hello", "bye"]))
