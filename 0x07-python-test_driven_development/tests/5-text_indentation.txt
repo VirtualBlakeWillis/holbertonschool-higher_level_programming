@@ -1,0 +1,41 @@
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Successful Test: no comp chars:
+    >>> text_indentation("Hello World")
+    Hello World
+
+Successful Test: some comp chars:
+    >>> text_indentation("Hello. World")
+    Hello.
+    <BLANKLINE>
+     World
+
+Failure: Number
+    >>> text_indentation(1)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+Failure: float
+    >>> text_indentation(1.5)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+Failure: list
+    >>> text_indentation([1])
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+Failure: no arg
+    >>> text_indentation()
+    Traceback (most recent call last):
+    ...
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+Failure: None
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
