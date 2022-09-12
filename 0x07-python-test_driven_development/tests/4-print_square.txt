@@ -6,12 +6,7 @@ Failed: type 'str' paramater
     ...
     TypeError: unorderable types: str() < int()
 
-Failed: size is -1:
-    >>> print_square(-1)
-    Traceback (most recent call last):
-    ValueError: size must be >= 0
-
-Failed: size is float and less than 0:
-    >>> print_square(-1.1)
-    Traceback (most recent call last):
-    ValueError: size must be >= 0
+Success:
+    >>> print_square(2)
+    ##
+    ##
