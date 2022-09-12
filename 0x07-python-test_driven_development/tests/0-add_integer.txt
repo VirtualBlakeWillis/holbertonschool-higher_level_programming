@@ -27,5 +27,7 @@ Success: a is float
     >>> add_integer(2.141)
     100
 
-    >>> add_integer(98, 2.141)
-    100
+Failure: a is None:
+    >>> add_integer(None)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
