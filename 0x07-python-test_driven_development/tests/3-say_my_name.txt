@@ -30,12 +30,11 @@ Test Failed: only name is int
     ...
     TypeError: first_name must be a string
 
-Test Failed: only name is int
-    >>> say_my_name(["john"])
-    Traceback (most recent call last):
-    ...
-    TypeError: first_name must be a string
 
 Test Success:
     >>> say_my_name("John", "Smith")
     My name is John Smith
+
+TEST SUCCESS:
+    >>> say_my_name("John")
+    My name is John 
