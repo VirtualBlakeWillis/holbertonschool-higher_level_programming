@@ -18,7 +18,8 @@ type casting a string
     Traceback (most recent call last):
     ...
     TypeError: a must be an integer
+
     >>> add_integer(5, "school")
     Traceback (most recent call last):
     ...
-    ValueError: invalid literal for int() with base 10: 'school'
+    TypeError: b must be an integer
