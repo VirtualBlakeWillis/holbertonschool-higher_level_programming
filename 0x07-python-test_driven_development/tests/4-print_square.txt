@@ -7,11 +7,6 @@ Failed: no paramaters
     ...
     TypeError: print_square() missing 1 required positional argument: 'size'
 
-Failed: type 'None' paramater
-    >>> print_square(None)
-    Traceback (most recent call last):
-    ...
-    TypeError: unorderable types: NoneType() < int()
 
 Failed: type 'str' paramater
     >>> print_square("school")
