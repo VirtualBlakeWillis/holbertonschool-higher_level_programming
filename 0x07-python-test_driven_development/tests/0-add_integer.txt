@@ -1,25 +1,30 @@
 Importing function for test cases
     >>> add_integer = __import__('0-add_integer').add_integer
 
-Correct usage: adding two integers
+Successful use:
     >>> add_integer(5, 6)
     11
 
-no args passed in
+Failure: no args:
     >>> add_integer()
     Traceback (most recent call last):
     ...
     TypeError: add_integer() missing 1 required positional argument: 'a'
 
-
-type casting a string
-
+Failure: a is string
     >>> add_integer("school", 5)
     Traceback (most recent call last):
     ...
     TypeError: a must be an integer
 
+Failure: b is string
     >>> add_integer(5, "school")
     Traceback (most recent call last):
     ...
     TypeError: b must be an integer
+
+Failure: a is list
+    >>> add_integer([1, 2])
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
