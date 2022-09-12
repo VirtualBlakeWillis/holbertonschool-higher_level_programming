@@ -12,8 +12,7 @@ class TestMaxInteger(unittest.TestCase):
     def test_1_num(self):
         self.assertEqual(max_integer([1]), 1)
 
-    def test_1_num_no_list(self):
-        self.assertRaises(TypeError, max_integer(), 1)
+
     def test_no_args(self):
         self.assertEqual(max_integer(), None)
 
