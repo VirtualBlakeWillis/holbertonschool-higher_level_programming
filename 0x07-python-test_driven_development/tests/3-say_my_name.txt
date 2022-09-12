@@ -12,14 +12,6 @@ Test Failed: last name is not string:
     ...
     TypeError: last_name must be a string
 
-Test Failed: first name is None
-    >>> say_my_name(None, "Smith")
-    Traceback (most recent call last):
-    ...
-    TypeError: first_name must be a string
-
-
-
 Test Success:
     >>> say_my_name("John", "Smith")
     My name is John Smith
