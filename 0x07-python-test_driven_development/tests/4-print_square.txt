@@ -25,9 +25,3 @@ Failed: type list paramater
     ...
     TypeError: unorderable types: list() < int()
 
-Success: pass int 4
-    >>> print_square(4)
-    ####
-    ####
-    ####
-    ####
