@@ -26,3 +26,6 @@ Failure: b is string
 Success: a is float
     >>> add_integer(2.141)
     100
+
+    >>> add_integer(98, 2.141)
+    100
