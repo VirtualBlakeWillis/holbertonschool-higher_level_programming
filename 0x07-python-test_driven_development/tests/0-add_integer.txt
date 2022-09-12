@@ -5,8 +5,9 @@ Successful use:
     >>> add_integer(5, 6)
     11
 
-    >>> add_integer(2)
-    100
+    >>> add_integer(7j2)
+    Traceback (most recent call last):
+    SyntaxError: invalid syntax
 
 Failure: no args:
     >>> add_integer()
