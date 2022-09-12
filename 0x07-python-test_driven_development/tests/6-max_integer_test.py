@@ -19,8 +19,8 @@ class TestMaxInteger(unittest.TestCase):
     def test_none(self):
         self.assertRaises(TypeError, max_integer(), None)
 
-    def test_emptyList(self):
-        self.assertRaises(TypeError, max_integer([]))
+    # def test_emptyList(self):
+    #     self.assertRaises(TypeError, max_integer([]))
     
     def test_strList(self):
         self.assertRaises(TypeError, max_integer(["hi", "hello", "bye"]))
