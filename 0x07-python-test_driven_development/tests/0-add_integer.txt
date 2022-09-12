@@ -41,3 +41,7 @@ type casting a string
     Traceback (most recent call last):
     ...
     ValueError: invalid literal for int() with base 10: 'school'
+
+ben's ideas:
+    >>> add_integer(-1, -5)
+    -6
