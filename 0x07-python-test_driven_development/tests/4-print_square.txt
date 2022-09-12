@@ -8,10 +8,4 @@ Failed: no paramaters
     TypeError: print_square() missing 1 required positional argument: 'size'
 
 
-Failed: type 'str' paramater
-    >>> print_square("school")
-    Traceback (most recent call last):
-    ...
-    TypeError: unorderable types: str() < int()
-
 
