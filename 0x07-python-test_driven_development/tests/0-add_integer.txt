@@ -7,9 +7,7 @@ Correct usage: adding two integers
 
 
 
-Correct usage: passing one number in, will add 98
-    >>> add_integer(2)
-    100
+
 
 
 no args passed in
