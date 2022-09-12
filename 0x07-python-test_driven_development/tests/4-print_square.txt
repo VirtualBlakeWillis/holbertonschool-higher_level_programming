@@ -1,9 +1,17 @@
     >>> print_square = __import__('4-print_square').print_square
 
-
-
 Failed: type 'str' paramater
     >>> print_square("school")
     Traceback (most recent call last):
     ...
     TypeError: unorderable types: str() < int()
+
+Failed: size is -1:
+    >>> print_square(-1)
+    Traceback (most recent call last):
+    ValueError: size must be >= 0
+
+Failed: size is float and less than 0:
+    >>> print_square(-1.1)
+    Traceback (most recent call last):
+    ValueError: size must be >= 0
