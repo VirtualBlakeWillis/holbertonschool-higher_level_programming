@@ -14,9 +14,4 @@ Failed: type 'str' paramater
     ...
     TypeError: unorderable types: str() < int()
 
-Failed: type list paramater
-    >>> print_square([1])
-    Traceback (most recent call last):
-    ...
-    TypeError: unorderable types: list() < int()
 
