@@ -4,9 +4,21 @@ Failed: type 'str' paramater
     >>> print_square("school")
     Traceback (most recent call last):
     ...
-    TypeError: unorderable types: str() < int()
+    TypeError: size must be an integer
 
 Success:
     >>> print_square(2)
     ##
     ##
+
+    >>> print_square(-1)
+    Traceback (most recent call last):
+    ValueError: size must be >= 0
+
+    >>> print_square(None)
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+    >>> print_square()
+    Traceback (most recent call last):
+    TypeError: print_square() missing 1 required positional argument: 'size'
