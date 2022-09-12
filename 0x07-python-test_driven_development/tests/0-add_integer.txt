@@ -5,6 +5,9 @@ Successful use:
     >>> add_integer(5, 6)
     11
 
+    >>> add_integer(2)
+    100
+
 Failure: no args:
     >>> add_integer()
     Traceback (most recent call last):
@@ -22,7 +25,6 @@ Failure: b is string
     Traceback (most recent call last):
     ...
     TypeError: b must be an integer
-
 
     >>> add_integer(float('inf'))
     Traceback (most recent call last):
