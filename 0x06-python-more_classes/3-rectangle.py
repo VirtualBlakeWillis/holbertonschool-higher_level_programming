@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" task 1 - rectangle class
+""" task 3 - rectangle class
 """
 
 
