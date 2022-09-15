@@ -12,6 +12,5 @@ Success: empty list
 
 Failure: None list
     >>> new_list = MyList(None)
-    >>> new_list.print_sorted()
     Traceback (most recent call last):
     TypeError: 'NoneType' object is not iterable
