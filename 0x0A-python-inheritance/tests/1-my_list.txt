@@ -12,6 +12,6 @@ Success: empty list
     >>> new_list.print_sorted()
     []
 
-    >>> new_list = MyList(1)
+    >>> new_list = MyList([1])
     >>> new_list.print_sorted()
     [1]
