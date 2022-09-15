@@ -1,10 +1,17 @@
     >>> MyList = __import__('1-my_list').MyList
 
+Success: unsorted int list
     >>> new_list = MyList([3, 2, 1])
     >>> new_list.print_sorted()
     [1, 2, 3]
 
+Success: empty list
     >>> new_list = MyList()
     >>> new_list.print_sorted()
     []
 
+Failure: None list
+    >>> new_list = MyList(None)
+    >>> new_list.print_sorted()
+    Traceback (most recent call last):
+    TypeError: 'NoneType' object is not iterable
