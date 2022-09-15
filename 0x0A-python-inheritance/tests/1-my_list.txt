@@ -4,10 +4,10 @@ Success: unsorted int list
     >>> new_list = MyList([3, 2, 1])
     >>> new_list.print_sorted()
     [1, 2, 3]
+    >>> print(new_list)
+    [3, 2, 1]
 
 Success: empty list
     >>> new_list = MyList()
     >>> new_list.print_sorted()
     []
-
-
