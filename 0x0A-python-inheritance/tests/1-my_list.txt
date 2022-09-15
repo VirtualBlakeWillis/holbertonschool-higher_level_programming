@@ -10,7 +10,4 @@ Success: empty list
     >>> new_list.print_sorted()
     []
 
-Failure: None list
-    >>> new_list = MyList(None)
-    Traceback (most recent call last):
-    TypeError: 'NoneType' object is not iterable
+
