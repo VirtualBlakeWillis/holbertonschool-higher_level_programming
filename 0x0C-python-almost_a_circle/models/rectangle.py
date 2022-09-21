@@ -31,16 +31,14 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         """ Update values of Rectangle """
-        attr = ["width", "height", "x", "y"]
         my_list = list(args)
+        attr = ["id", "width", "height", "x", "y"]
 
         for k, v in kwargs.items():
             setattr(self, k, v)
 
         for i in range(len(my_list)):
-            if i is 0:
-                super().__init__(my_list[i])
-            setattr(self, attr[i - 1], my_list[i])
+            setattr(self, attr[i], my_list[i])
 
     @property
     def width(self):
