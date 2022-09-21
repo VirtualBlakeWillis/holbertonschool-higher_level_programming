@@ -14,6 +14,27 @@ class Square(Rectangle):
         rep += " - {}".format(self.width)
         return rep
 
+    def update(self, *args, **kwargs):
+        """ update values of a Square """
+        if args:
+            my_list = list(args)
+            attr = ["id", "width", "height", "x", "y"]
+            myl = len(my_list)
+            if myl >= 1:
+                setattr(self, attr[0], my_list[0])
+            if myl >= 2:
+                setattr(self, attr[1], my_list[1])
+            if myl >= 2:
+                setattr(self, attr[2], my_list[1])
+            if myl >= 3:
+                setattr(self, attr[3], my_list[2])
+            if myl >= 4:
+                setattr(self, attr[4], my_list[3])
+
+        else:
+            for k, v in kwargs.items():
+                setattr(self, k, v)
+
     @property
     def size(self):
         return self.width
