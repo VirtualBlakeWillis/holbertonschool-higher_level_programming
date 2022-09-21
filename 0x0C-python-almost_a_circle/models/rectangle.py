@@ -62,7 +62,7 @@ class Rectangle(Base):
         """ area """
 
         return self.width * self.height
-    
+
     def display(self):
         """ visual representation of object """
 
@@ -70,4 +70,3 @@ class Rectangle(Base):
             for char in range(self.width):
                 print("#", end='')
             print()
-
