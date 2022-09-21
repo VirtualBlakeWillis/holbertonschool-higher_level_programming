@@ -30,25 +30,17 @@ class Rectangle(Base):
         return rep
 
     def update(self, *args, **kwargs):
-        """ a stupid function that i dont like """
-        my_list = []
+        """ Update values of Rectangle """
+        attr = ["width", "height", "x", "y"]
+        my_list = list(args)
+
         for k,v in kwargs.items():
             setattr(self, k, v)
 
-        for arg in args:
-            my_list.append(arg)
-        list_len = len(my_list)
-
-        if list_len > 0:
-            super().__init__(my_list[0])
-        if list_len > 1:
-            self.width = my_list[1]
-        if list_len > 2:
-            self.height = my_list[2]
-        if list_len > 3:
-            self.x = my_list[3]
-        if list_len > 4:
-            self.y = my_list[4]
+        for i in range(len(my_list)):
+            if i is 0:
+                super().__init__(my_list[i])
+            setattr(self, attr[i - 1], my_list[i])
 
     @property
     def width(self):
