@@ -29,9 +29,12 @@ class Rectangle(Base):
         rep += " - {}/{}".format(self.width, self.height)
         return rep
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """ a stupid function that i dont like """
         my_list = []
+        for k,v in kwargs.items():
+            setattr(self, k, v)
+
         for arg in args:
             my_list.append(arg)
         list_len = len(my_list)
