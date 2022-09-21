@@ -34,11 +34,13 @@ class Rectangle(Base):
         my_list = list(args)
         attr = ["id", "width", "height", "x", "y"]
 
-        for k, v in kwargs.items():
-            setattr(self, k, v)
+        if args:
+            for i in range(len(my_list)):
+                setattr(self, attr[i], my_list[i])
 
-        for i in range(len(my_list)):
-            setattr(self, attr[i], my_list[i])
+        else:
+            for k, v in kwargs.items():
+                setattr(self, k, v)
 
     @property
     def width(self):
