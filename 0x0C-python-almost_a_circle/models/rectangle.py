@@ -29,6 +29,23 @@ class Rectangle(Base):
         rep += " - {}/{}".format(self.width, self.height)
         return rep
 
+    def update(self, *args):
+        my_list = []
+        for arg in args:
+            my_list.append(arg)
+        list_len = len(my_list)
+
+        if list_len > 0:
+            super().__init__(my_list[0])
+        if list_len > 1:
+            self.width = my_list[1]
+        if list_len > 2:
+            self.height = my_list[2]
+        if list_len > 3:
+            self.x = my_list[3]
+        if list_len > 4:
+            self.y = my_list[4]
+
     @property
     def width(self):
         return self.__width
