@@ -10,6 +10,6 @@ class Square(Rectangle):
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
-        rep = "[Square] {} {}/{}".format(self.id, self.x, self.y)
+        rep = "[Square] ({}) {}/{}".format(self.id, self.x, self.y)
         rep += " - {}".format(self.width)
         return rep
