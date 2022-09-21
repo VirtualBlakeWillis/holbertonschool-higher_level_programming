@@ -1,14 +1,14 @@
 #!/usr/bin/python3
-""" base class """
+""" base module that defines base class """
 
 
 class Base:
-    """ logic """
+    """ private class variable """
 
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """init """
+        """initialise an object with id """
 
         if id is not None:
             self.id = id
@@ -17,7 +17,7 @@ class Base:
             self.id = Base.__nb_objects
 
     def int_validator(self, value, name):
-        """ method documentation """
+        """ integer validator method for subclass use """
 
         if type(value) is not int:
             raise TypeError(name + " must be an integer")

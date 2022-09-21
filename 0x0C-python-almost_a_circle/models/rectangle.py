@@ -1,26 +1,33 @@
 #!/usr/bin/python3
-""" Rectangle Class a longer comment
-"""
+""" Rectangle module that defines rectangle class """
 from models.base import Base
 
 
 class Rectangle(Base):
-    """ logic some kinda long
-    """
+    """ Rectangle Class """
 
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
-        self.int_validator(width, "width")
-        self.__width = width
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
-        self.int_validator(height, "height")
-        self.__height = height
+    def area(self):
+        """ return Area of Rectangle """
+        return self.width * self.height
 
-        self.int_validator(x, "x")
-        self.__x = x
+    def display(self):
+        """ visual representation of object """
+        print("\n" * self.y, end='')
+        for row in range(self.height):
+            print(" " * self.x + "#" * self.width)
 
-        self.int_validator(y, "y")
-        self.__y = y
+    def __str__(self):
+        """ string representation of Rectangle """
+        rep = "[Rectangle] ({}) {}/{}".format(self.id, self.x, self.y)
+        rep += " - {}/{}".format(self.width, self.height)
+        return rep
 
     @property
     def width(self):
@@ -57,24 +64,3 @@ class Rectangle(Base):
     def y(self, y):
         self.int_validator(y, "y")
         self.__y = y
-
-    def area(self):
-        """ area """
-
-        return self.width * self.height
-
-    def display(self):
-        """ visual representation of object """
-        print("\n" * self.y, end='')
-        for row in range(self.height):
-            print(" " * self.x, end='')
-            for char in range(self.width):
-                print("#", end='')
-            print()
-
-    def __str__(self):
-        """ string representation of Rectangle """
-
-        rep = "[Rectangle] ({}) {}/{}".format(self.id, self.x, self.y)
-        rep += " - {}/{}".format(self.width, self.height)
-        return rep
