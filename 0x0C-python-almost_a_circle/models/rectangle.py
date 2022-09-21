@@ -30,6 +30,7 @@ class Rectangle(Base):
         return rep
 
     def update(self, *args):
+        """ a stupid function that i dont like """
         my_list = []
         for arg in args:
             my_list.append(arg)
