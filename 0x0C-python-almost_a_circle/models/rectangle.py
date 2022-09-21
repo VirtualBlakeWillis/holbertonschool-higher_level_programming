@@ -62,3 +62,12 @@ class Rectangle(Base):
         """ area """
 
         return self.width * self.height
+    
+    def display(self):
+        """ visual representation of object """
+
+        for row in range(self.height):
+            for char in range(self.width):
+                print("#", end='')
+            print()
+
