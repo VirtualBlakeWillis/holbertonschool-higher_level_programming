@@ -65,8 +65,9 @@ class Rectangle(Base):
 
     def display(self):
         """ visual representation of object """
-
+        print("\n" * self.y, end='')
         for row in range(self.height):
+            print(" " * self.x, end='')
             for char in range(self.width):
                 print("#", end='')
             print()
