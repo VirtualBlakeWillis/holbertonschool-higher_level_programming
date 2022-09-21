@@ -8,6 +8,8 @@ class Base:
     __nb_objects = 0
 
     def __init__(self, id=None):
+        """init """
+
         if id is not None:
             self.id = id
         else:
@@ -15,6 +17,8 @@ class Base:
             self.id = Base.__nb_objects
 
     def int_validator(self, value, name):
+        """ method documentation"""
+
         if type(value) is not int:
             raise TypeError(name + " must be an integer")
 

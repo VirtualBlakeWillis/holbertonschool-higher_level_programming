@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-""" Rectangle Class 
+""" Rectangle Class a longer comment
 """
 from models.base import Base
 
 
 class Rectangle(Base):
-    """ logic 
+    """ logic some kinda long
     """
 
     def __init__(self, width, height, x=0, y=0, id=None):
