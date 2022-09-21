@@ -70,3 +70,10 @@ class Rectangle(Base):
             for char in range(self.width):
                 print("#", end='')
             print()
+
+    def __str__(self):
+        """ string representation of Rectangle """
+
+        rep = "[Rectangle] ({}) {}/{}".format(self.id, self.x, self.y)
+        rep += " - {}/{}".format(self.width, self.height)
+        return rep
