@@ -20,16 +20,13 @@ class Square(Rectangle):
             my_list = list(args)
             attr = ["id", "width", "height", "x", "y"]
             myl = len(my_list)
-            if myl >= 1:
-                setattr(self, attr[0], my_list[0])
-            if myl >= 2:
-                setattr(self, attr[1], my_list[1])
-            if myl >= 2:
-                setattr(self, attr[2], my_list[1])
-            if myl >= 3:
-                setattr(self, attr[3], my_list[2])
-            if myl >= 4:
-                setattr(self, attr[4], my_list[3])
+            for i in range(len(my_list)):
+                print(i)
+                if i <= 1:
+                    setattr(self, attr[i], my_list[i])
+                else:
+                    setattr(self, attr[i], my_list[i-1])
+
 
         else:
             for k, v in kwargs.items():
