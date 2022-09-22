@@ -31,7 +31,7 @@ class Base:
                 raise ValueError(name + " must be > 0")
 
     def to_json_string(list_dictionaries):
-        "converts a dictionary to json string"
+        """Returns the JSON string representation of a list of dictionaries"""
         if list_dictionaries:
             return json.dumps(list_dictionaries)
         return "[]"
