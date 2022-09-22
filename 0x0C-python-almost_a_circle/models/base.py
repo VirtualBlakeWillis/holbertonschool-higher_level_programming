@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """ base module that defines base class """
+import json
 
 
 class Base:
@@ -28,3 +29,6 @@ class Base:
         else:
             if value <= 0:
                 raise ValueError(name + " must be > 0")
+
+    def to_json_string(list_dictionaries):
+        return json.dumps(list_dictionaries)
