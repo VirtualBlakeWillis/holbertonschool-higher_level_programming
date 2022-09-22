@@ -30,8 +30,8 @@ class Base:
             if value <= 0:
                 raise ValueError(name + " must be > 0")
 
-    def to_json_string(list_dictionaries):
+    def to_json_string(list_d):
         """Returns the JSON string representation of a list of dictionaries"""
-        if len(list_dictionaries) != 0:
-            return json.dumps(list_dictionaries)
-        return "[]"
+        if list_d is None or len(list_d) == 0
+            return "[]"
+        return json.dumps(list_dictionaries)
