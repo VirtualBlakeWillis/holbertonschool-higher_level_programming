@@ -8,8 +8,8 @@ class TestBase(unittest.TestCase):
     """ Test Base! """
 
     def test_id_empty(self):
-        b1 = Base(None)
-        self.assertEqual(b1.id, 1)
+        b1 = Base(10)
+        self.assertEqual(b1.id, 10)
 
 if __name__ == "__main__":
     unittest.main()
