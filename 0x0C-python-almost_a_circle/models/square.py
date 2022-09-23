@@ -11,15 +11,15 @@ class Square(Rectangle):
 
     def __str__(self):
         """ String representation of Square """
-        return "[%s] (%s) %s/%s - %s"
-        %(self.__name__, self.id, self.x, self.y, self.width)
+        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
+                                                 self.width)
 
     def to_dictionary(self):
         """ Dictionary representation of Square """
         return {'id': self.id, 'size': self.size, 'x': self.x, 'y': self.y}
 
     def update(self, *args, **kwargs):
-        """ Update values of Suare """
+        """ Update values of Square """
         if args:
             my_list = list(args)
             attr = ["id", "width", "height", "x", "y"]
