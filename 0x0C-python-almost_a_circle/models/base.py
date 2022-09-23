@@ -58,14 +58,13 @@ class Base:
     @classmethod
     def load_from_file(cls):
         """ returns a list of instances from JSON file """
+        list_of_instances = []
         with open(cls.__name__ + ".json", "r", encoding="utf-8") as f:
-            list_of_instances = []
             my_str = f.read()
             if len(my_str) > 2:
                 for dirt in cls.from_json_string(my_str):
                     list_of_instances.append(cls.create(**dirt))
-            return list_of_instances
-        return []
+        return list_of_instances
 
     @classmethod
     def create(cls, **dictionary):
