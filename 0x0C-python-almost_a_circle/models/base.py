@@ -65,6 +65,7 @@ class Base:
                 for dirt in cls.from_json_string(my_str):
                     list_of_instances.append(cls.create(**dirt))
             return list_of_instances
+        return []
 
     @classmethod
     def create(cls, **dictionary):
