@@ -44,14 +44,8 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         " return dictionary representation of Rectangle"
-        my_dict = {
-            'id': self.id,
-            'width': self.width,
-            'height': self.height,
-            'x': self.x,
-            'y': self.y
-        }
-        return my_dict
+        return {'id': self.id, 'width': self.width, 'height': self.height,
+                'x': self.x, 'y': self.y}
 
     @property
     def width(self):
