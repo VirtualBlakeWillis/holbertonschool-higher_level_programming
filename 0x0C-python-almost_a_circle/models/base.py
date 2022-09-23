@@ -61,7 +61,7 @@ class Base:
         with open(cls.__name__ + ".json", "r", encoding="utf-8") as f:
             list_of_instances = []
             my_str = f.read()
-            if len(my_str) > 0:
+            if len(my_str) > 2:
                 for dirt in cls.from_json_string(my_str):
                     list_of_instances.append(cls.create(**dirt))
             return list_of_instances
