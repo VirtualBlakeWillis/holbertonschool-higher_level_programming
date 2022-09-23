@@ -13,11 +13,7 @@ class TestBase(unittest.TestCase):
 
     def test_id_empty(self):
         b2 = Base()
-        self.assertEqual(b2.id, 2)
-
-    def test_id_None(self):
-        b3 = Base(None)
-        self.assertEqual(b3.id, 1)
+        self.assertEqual(b2.id, 1)
 
 if __name__ == "__main__":
     unittest.main()
