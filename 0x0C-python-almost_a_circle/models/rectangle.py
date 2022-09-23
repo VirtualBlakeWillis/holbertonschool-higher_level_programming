@@ -7,27 +7,33 @@ class Rectangle(Base):
     """ Rectangle Class """
 
     def __init__(self, width, height, x=0, y=0, id=None):
+        """ Initalize Rectangle Object """
         super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
         self.y = y
 
-    def area(self):
-        """ return Area of Rectangle """
-        return self.width * self.height
+    def __str__(self):
+        """ String representation of Rectangle """
+        rep = "[Rectangle] ({}) {}/{}".format(self.id, self.x, self.y)
+        rep += " - {}/{}".format(self.width, self.height)
+        return rep
+
+    def to_dictionary(self):
+        """ Dictionary representation of Rectangle """
+        return {'id': self.id, 'width': self.width, 'height': self.height,
+                'x': self.x, 'y': self.y}
 
     def display(self):
-        """ visual representation of object """
+        """ Visual representation of Rectangle """
         print("\n" * self.y, end='')
         for row in range(self.height):
             print(" " * self.x + "#" * self.width)
 
-    def __str__(self):
-        """ string representation of Rectangle """
-        rep = "[Rectangle] ({}) {}/{}".format(self.id, self.x, self.y)
-        rep += " - {}/{}".format(self.width, self.height)
-        return rep
+    def area(self):
+        """ Area of Rectangle """
+        return self.width * self.height
 
     def update(self, *args, **kwargs):
         """ Update values of Rectangle """
@@ -41,11 +47,6 @@ class Rectangle(Base):
         else:
             for k, v in kwargs.items():
                 setattr(self, k, v)
-
-    def to_dictionary(self):
-        " return dictionary representation of Rectangle"
-        return {'id': self.id, 'width': self.width, 'height': self.height,
-                'x': self.x, 'y': self.y}
 
     @property
     def width(self):
