@@ -10,12 +10,16 @@ class Square(Rectangle):
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
-        rep = "[Square] ({}) {}/{}".format(self.id, self.x, self.y)
-        rep += " - {}".format(self.width)
-        return rep
+        """ String representation of Square """
+        return "[%s] (%s) %s/%s - %s"
+        %(self.__name__, self.id, self.x, self.y, self.width)
+
+    def to_dictionary(self):
+        """ Dictionary representation of Square """
+        return {'id': self.id, 'size': self.size, 'x': self.x, 'y': self.y}
 
     def update(self, *args, **kwargs):
-        """ update values of a Square """
+        """ Update values of Suare """
         if args:
             my_list = list(args)
             attr = ["id", "width", "height", "x", "y"]
@@ -30,14 +34,6 @@ class Square(Rectangle):
         else:
             for k, v in kwargs.items():
                 setattr(self, k, v)
-
-    def to_dictionary(self):
-        "return dictionary representatino of Square"
-        my_dict = {
-            'id': self.id, 'size': self.size,
-            'x': self.x, 'y': self.y
-        }
-        return my_dict
 
     @property
     def size(self):
