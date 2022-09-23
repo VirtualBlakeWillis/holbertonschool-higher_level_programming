@@ -19,5 +19,9 @@ class TestBase(unittest.TestCase):
         b3 = Base("hi")
         self.assertEqual(b3.id, "hi")
 
+    def test_id_list(self):
+        b4 = Base([3,4])
+        self.assertEqual(b4.id, [3,4])
+
 if __name__ == "__main__":
     unittest.main()
