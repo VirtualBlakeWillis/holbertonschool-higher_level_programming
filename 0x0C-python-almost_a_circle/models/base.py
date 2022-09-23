@@ -54,3 +54,15 @@ class Base:
                 my_list.append(obj.to_dictionary())
         with open(cls.__name__ + ".json", "w", encoding="utf-8") as f:
             f.write(cls.to_json_string(my_list))
+
+    @classmethod
+    def create(cls, **dictionary):
+        """ creates an instance of cls with values set """
+
+        if cls.__name__ == "Rectangle":
+            new = cls(1, 1, 1, 1)
+        if cls.__name__ == "Square":
+            new = cls(1, 1, 1)
+
+        new.update(**dictionary)
+        return new
