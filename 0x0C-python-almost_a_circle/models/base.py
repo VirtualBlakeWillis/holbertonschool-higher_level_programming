@@ -60,9 +60,9 @@ class Base:
         """ creates an instance of cls with values set """
 
         if cls.__name__ == "Rectangle":
-            new = cls(1, 1, 1, 1)
+            new = cls(1, 1)
         if cls.__name__ == "Square":
-            new = cls(1, 1, 1)
+            new = cls(1)
 
         new.update(**dictionary)
         return new
