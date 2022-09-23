@@ -8,7 +8,7 @@ class TestBase(unittest.TestCase):
     """ Test Base! """
 
     def test_id_empty(self):
-        b1 = Base()
+        b1 = Base(None)
         self.assertEqual(b1.id, 1)
 
 if __name__ == "__main__":
