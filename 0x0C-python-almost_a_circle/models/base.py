@@ -30,8 +30,9 @@ class Base:
             if value <= 0:
                 raise ValueError(name + " must be > 0")
 
+    @staticmethod
     def to_json_string(list_dictionaries):
-        """Returns the JSON string representation of a list of dictionaries"""
+        """Convert list of dictionaries to JSON string"""
 
         if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
@@ -39,10 +40,9 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-        """ Returns a list of a JSON string """
+        """ Convert JSON string to list of dictionaries """
         if json_string is None or json_string == "":
             return []
-
         return json.loads(json_string)
 
     @classmethod
@@ -57,7 +57,7 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        """ returns a list of instances """
+        """ returns a list of instances from JSON file """
         with open(cls.__name__ + ".json", "r", encoding="utf-8") as f:
             list_of_instances = []
             my_str = f.read()
@@ -70,11 +70,11 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """ creates an instance of cls with values set """
-
         if cls.__name__ == "Rectangle":
             new = cls(1, 1)
-        if cls.__name__ == "Square":
+        elif cls.__name__ == "Square":
             new = cls(1)
-
+        else:
+            return
         new.update(**dictionary)
         return new
