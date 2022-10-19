@@ -7,8 +7,10 @@ class State
 id int
 name str
 """
+
+
 class State(Base):
     __tablename__ = "states"
-    id = Column(Integer(), autoincrement=True, primary_key=True, 
+    id = Column(Integer(), autoincrement=True, primary_key=True,
                 nullable=False)
     name = Column(String(128), nullable=False)
