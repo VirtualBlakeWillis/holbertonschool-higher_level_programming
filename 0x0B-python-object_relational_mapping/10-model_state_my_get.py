@@ -18,4 +18,4 @@ if __name__ == "__main__":
     if result is None:
         print("Not Found")
     else:
-        print("{}: {}".format(result.id, result.name))
+        print(result.id)
