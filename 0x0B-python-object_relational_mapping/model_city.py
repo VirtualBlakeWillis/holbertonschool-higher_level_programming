@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ create table cities using SQLAlchemy """
-from sqlalchemy import Column, String, Integer, Base
+from sqlalchemy import Column, String, Integer
 from sqlalchemy.orm import declarative_base
 from sqlalchemy import ForeignKey
 
