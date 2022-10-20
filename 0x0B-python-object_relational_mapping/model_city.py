@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 """ create table cities using SQLAlchemy """
-from sqlalchemy import Column, String, Integer
-from model_state import Base
+from sqlalchemy import Column, String, Integer, Base
+from sqlalchemy.orm import declarative_base
 from sqlalchemy import ForeignKey
 
+Base = declarative_base()
 
 class City(Base):
     """ City class """
