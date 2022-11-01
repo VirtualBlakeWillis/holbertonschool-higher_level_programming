@@ -10,8 +10,10 @@ if __name__ == "__main__":
     import requests
     from sys import argv
 
-    username = argv[1]
-    password = argv[2]
-    url = "https://api.github.com/users/{}".format(username)
+    u_t = "{}:{}".format(argv[1], argv[2])
+    url = "https://api.github.com/users/{}".format(u_t)
     req = requests.get(url).json()
-    print(req['id'])
+    if 'id' in req.keys():
+        print(req['id'])
+    else:
+        print("None")
