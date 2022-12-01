@@ -3,7 +3,7 @@
 
 const argv = process.argv;
 
-if (argv.length >= 3) {
+if (argv[2]) {
   console.log(argv[2]);
 } else {
   console.log('No argument');
