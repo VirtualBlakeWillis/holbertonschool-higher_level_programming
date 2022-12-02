@@ -6,7 +6,7 @@ class Square extends Square5 {
     super(size, size);
   }
 
-  charPrint (c) {
+  charPrint (c = undefined) {
     let x = 'X';
     if (c !== undefined) {
       x = c;
