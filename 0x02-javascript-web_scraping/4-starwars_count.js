@@ -6,7 +6,7 @@ const wedgeAntilles = 'https://swapi-api.hbtn.io/api/people/18/';
 let count = 0;
 
 request.get(url, 'utf8', (error, response, body) => {
-  if (error) console.log(error);
+  if (error) throw error;
   else {
     const jsonData = JSON.parse(body);
     for (const i in jsonData.results) {
